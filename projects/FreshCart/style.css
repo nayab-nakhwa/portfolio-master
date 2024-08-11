@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+a:link,a:visited{
+    text-decoration: none;
+    color: black;
+}
+#logo{
+    cursor: pointer;
+}
+#search{
+    width: 600px;
+}
+.hide{
+    display: none;
+}
+.drop:hover .hide{
+    display: block;
+}
+.green:hover{
+    color: rgb(15, 205, 15);
+    text-shadow: 0.3px green;
+}
+
+input[type="search"]{
+    background-image: url("images/search.svg");
+    background-repeat: no-repeat;
+    background-position: 570px;
+    padding: 10px;
+}
+
+.arr{
+    font-size: 24px;
+}
+
+.arr:hover{
+    color: green;
+    cursor: pointer;
+}
