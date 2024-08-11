@@ -1,0 +1,20 @@
+.cursor {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    left: 50%;
+    filter: blur(50px);
+    z-index: -1;
+    margin: -50px 0 0 -50px;
+    background: rgb(152, 50, 248);
+    border-radius: 80%;
+    pointer-events: none;
+    transition: transform 0.2s ease-out;
+    z-index: 1000; /* Make sure the cursor is above other elements */
+  }
+  
+  
+  .cursor.is-moving {
+    transform: scale(1.2);
+  }

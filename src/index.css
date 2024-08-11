@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:wght@500&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light mode colors */
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --primary-color: #6200ea;  /* Example primary color */
+  --secondary-color: #03dac6; /* Example secondary color */
+  --accent-color: #ff5722;    /* Example accent color */
+  --nav-bg-color: #f8f9fa;
+  --nav-text-color: #343a40;
+  --button-bg-color: #6200ea;
+  --button-text-color: #ffffff;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  cursor: none;
+}
+
+
+.dark{
+  background: #000;
+  color: white;
+}
+.light{
+  background: white;
+  color: #000;
+}
+.dark-mode-toggle {
+  border: 1px solid var(--text-color);
+  padding: 5px 10px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode-toggle:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+

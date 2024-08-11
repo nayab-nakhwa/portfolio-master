@@ -1,0 +1,16 @@
+.Circle {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid rgb(152, 50, 248); /* Add a border and make it black */
+    background-color: transparent; /* Make the center transparent */
+    pointer-events: none;
+    transition: transform 0.2s ease-out;
+    z-index: 2000; /* Ensure the cursor is above other elements */
+  }
+  
+  .Circle.is-moving {
+    transform: scale(1.2);
+  }
+  
