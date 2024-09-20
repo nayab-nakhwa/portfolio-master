@@ -4,7 +4,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-scroll";
 import { useEffect } from "react";
-import '../components/Navbar.css'
+
 function Navbar() {
   const [menu, setMenu] = useState(false);
   const navItems = [
