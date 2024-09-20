@@ -2,7 +2,7 @@ import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import { Link } from "react-scroll";
+import './Home.css'
 
 function Contact() {
   const {
@@ -78,12 +78,24 @@ function Contact() {
               />
               {errors.message && <span className="text-red-500">This field is required*</span>}
             </div>
-            <button
-              type="submit"
-              className="bg-black text-white rounded-xl px-5 py-2 hover:bg-purple-800 hover:scale-105 duration-300"
-            >
-            Send
-            </button>
+            <button class="animated-button">
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="arr-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                  </svg>
+                  <span class="text">Hire Me!</span>
+                  <span class="circle"></span>
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="arr-1"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                  </svg>
+                </button>
           </form>
         </div>
       </div>

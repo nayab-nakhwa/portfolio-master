@@ -32,27 +32,33 @@ function Navbar() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    const savedMode = localStorage.getItem('dark-mode');
+    const savedMode = localStorage.getItem("dark-mode");
     if (savedMode) {
       setIsDarkMode(JSON.parse(savedMode));
     }
   }, []);
 
   useEffect(() => {
-    document.body.className = isDarkMode ? 'light' : 'dark';
-    localStorage.setItem('dark-mode', JSON.stringify(isDarkMode));
+    document.body.className = isDarkMode ? "light" : "dark";
+    localStorage.setItem("dark-mode", JSON.stringify(isDarkMode));
   }, [isDarkMode]);
   return (
     <>
       <div className="max-w-screen-2x dark container mx-auto px-4 md:px-20 h-16 shadow-md fixed top-0 left-0 right-0 z-50 bg-slate-100">
         <div className="flex justify-between items-center h-16">
-          <div className=" flex space-x-2">
-            <img src={pic} className="h-12 w-12 object-cover object-top rounded-full" alt="" />
-            <h1 className="font-semibold text-xl cursor-pointer  hover:text-purple-700 duration-500">
-              NAYAB NAKHWA
-              <p className="text-sm  hover:text-purple-700">Web Developer</p>
-            </h1>
-          </div>
+          <Link to="Home" smooth={true} duration={500} offset={-70}>
+            <div className="flex space-x-2">
+              <img
+                src={pic}
+                className="h-12 w-12 object-cover object-top rounded-full"
+                alt=""
+              />
+              <h1 className="font-semibold text-xl cursor-pointer  hover:text-purple-700 duration-500">
+                NAYAB NAKHWA
+                <p className="text-sm  hover:text-purple-700">Web Developer</p>
+              </h1>
+            </div>
+          </Link>
           {/* desktop navbar */}
           <div className="links p-0 z-500">
             <ul className="hidden dark md:flex space-x-8 p-0">
@@ -72,12 +78,14 @@ function Navbar() {
                   </Link>
                 </li>
               ))}
-              <button className="dark-mode-toggle hover:text-purple-700 !p-0" onClick={() => setIsDarkMode(!isDarkMode)}>
-        {isDarkMode ? '🌙 Dark Mode' : '☀️ Light Mode'}
-      </button>
+              <button
+                className="dark-mode-toggle hover:text-purple-700 !p-0"
+                onClick={() => setIsDarkMode(!isDarkMode)}
+              >
+                {isDarkMode ? "🌙 Dark Mode" : "☀️ Light Mode"}
+              </button>
             </ul>
-            
-            
+
             <div onClick={() => setMenu(!menu)} className="md:hidden">
               {menu ? <IoCloseSharp size={24} /> : <AiOutlineMenu size={24} />}
             </div>
@@ -85,7 +93,7 @@ function Navbar() {
         </div>
         {/* mobile navbar */}
         {menu && (
-          <div className="bg-white light z-500" >
+          <div className="bg-white light z-500">
             <ul className="md:hidden flex flex-col h-screen items-center justify-center space-y-3 text-xl">
               {navItems.map(({ id, text }) => (
                 <li
