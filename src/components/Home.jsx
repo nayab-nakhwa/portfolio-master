@@ -13,6 +13,7 @@ import { FaReact } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa6";
 
 import { ReactTyped } from "react-typed";
+import './Home.css'
 
 function Home() {
   return (
@@ -40,15 +41,42 @@ function Home() {
             </p>
             <br />
             <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
-            <a href="Nayab-resume.pdf" target="_blank"><button  className="btn btn-success py-2 px-4 hover:scale-105 hover:text-purple-500 hover:bg-white hover:border hover:border-purple-800 duration-300 bg-purple-500 text-white rounded-lg">Hire me!</button></a>
+            <a href="Nayab-resume.pdf" target="_blank">
+<button class="animated-button">
+  <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+    ></path>
+  </svg>
+  <span class="text">Hire Me!</span>
+  <span class="circle"></span>
+  <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+    ></path>
+  </svg>
+</button>
+</a>
             <Link to='Contact'
                     smooth={true}
                     duration={500}
                     offset={-70}
                     activeClass="active">
-                    <button className="btn btn-success py-2 px-4 hover:scale-105  hover:text-purple-500 hover:bg-white hover:border hover:border-purple-800 duration-300 bg-purple-500 text-white rounded-lg">
-                  Contact me?
-                  </button> </Link>
+<button class="animated-button">
+  <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+    ></path>
+  </svg>
+  <span class="text">Contact Me?</span>
+  <span class="circle"></span>
+  <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+    ></path>
+  </svg>
+</button>
+ </Link>
             </div>
             <br />
             {/* social media icons */}

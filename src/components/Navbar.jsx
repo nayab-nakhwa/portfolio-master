@@ -4,6 +4,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-scroll";
 import { useEffect } from "react";
+import '../components/Navbar.css'
 function Navbar() {
   const [menu, setMenu] = useState(false);
   const navItems = [
@@ -53,8 +54,8 @@ function Navbar() {
             </h1>
           </div>
           {/* desktop navbar */}
-          <div>
-            <ul className="hidden dark md:flex space-x-8">
+          <div className="links p-0 z-500">
+            <ul className="hidden dark md:flex space-x-8 p-0">
               {navItems.map(({ id, text }) => (
                 <li
                   className="hover:scale-105 hover:text-purple-700 duration-200 cursor-pointer"
@@ -71,7 +72,7 @@ function Navbar() {
                   </Link>
                 </li>
               ))}
-              <button className="dark-mode-toggle hover:text-purple-700" onClick={() => setIsDarkMode(!isDarkMode)}>
+              <button className="dark-mode-toggle hover:text-purple-700 !p-0" onClick={() => setIsDarkMode(!isDarkMode)}>
         {isDarkMode ? '🌙 Dark Mode' : '☀️ Light Mode'}
       </button>
             </ul>
@@ -84,7 +85,7 @@ function Navbar() {
         </div>
         {/* mobile navbar */}
         {menu && (
-          <div className="bg-white light" >
+          <div className="bg-white light z-500" >
             <ul className="md:hidden flex flex-col h-screen items-center justify-center space-y-3 text-xl">
               {navItems.map(({ id, text }) => (
                 <li
